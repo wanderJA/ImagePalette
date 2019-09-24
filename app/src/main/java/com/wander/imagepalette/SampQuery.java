@@ -88,21 +88,15 @@ public class SampQuery {
 
                 /* Hostname */
                 int hostnamelenght = buff.getInt();
-                infos[3] = "";
-                for (int i = 0; i < hostnamelenght; i++)
-                    infos[3] += (char) buff.get();
+                infos[3] = convertGBK(buff,hostnamelenght);
 
                 /* Gamemode */
                 int gamemodelenght = buff.getInt();
-                infos[4] = "";
-                for (int i = 0; i < gamemodelenght; i++)
-                    infos[4] += (char) buff.get();
+                infos[4] = convertGBK(buff,gamemodelenght);
 
                 /* Map name */
                 int mapnamelenght = buff.getInt();
-                infos[5] = "";
-                for (int i = 0; i < mapnamelenght; i++)
-                    infos[5] += (char) buff.get();
+                infos[5] = convertGBK(buff,mapnamelenght);
 
                 return infos;
             } else {
